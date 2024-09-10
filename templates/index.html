@@ -1,0 +1,81 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI引擎
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: #02a0f1;"><b>🍀AI引擎🍀</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">让AI引导帮助您检测疾病</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <h5><b>为什么有必要检测植物的病害？</b></h5>
+                    <p>植物病害影响其各自物种的生长。此外，一些研究差距是 从中识别出用于检测植物病害的更高透明度，甚至在症状明显出现之前。诊断是植物病理学家培训中最重要的方面之一。没有适当识别疾病和致病因素，可以采取疾病控制措施浪费时间和金钱，并可能导致进一步的工厂损失。正确的疾病诊断是 必要的。
+                    </p>
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;"><img
+                        src="https://www.pngjoy.com/pngl/250/4840262_plants-png-indoors-tropical-plant-png-hd-png.png "
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn">选择图片</label>
+                            <span id="file-chosen">没有选择图片</span>
+                        </div>
+
+                        <!-- End -->
+
+                        <h6 class="text-center mb-4 text-muted">
+                            只需上传植物的叶子图像，然后就可以看到人工智能的魔力。
+                        </h6>
+
+                        <!-- Custom bootstrap upload file-->
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">提交</button></a>
+                        </center>
+                    </form>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <h5><b>预防植物病害的步骤如下：</b></h5>
+                    <ol>
+                       <li>遵循良好卫生规范</li>
+                        <li>施肥以保持植物健康</li>
+                        <li>在把植物带回家之前检查它们是否有疾病</li>
+                        <li>种植前让土壤变暖</li>
+                        <li>通过轮作确保健康的蔬菜园</li>
+                        <li>提供良好的空气流通</li>
+                        <li>移除生病的茎和叶子</li>
+                    </ol>
+                    <a target="_blank" href="https://www.thespruce.com/prevent-plant-diseases-in-your-garden-2539511"
+                        class="mx-2"><button type="button" class="btn btn-outline-success">更多信息</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

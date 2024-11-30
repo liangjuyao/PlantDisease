@@ -38,8 +38,8 @@ conda activate leaf
 # 在项目根目录下打开控制台安装依赖包
 pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --trusted-host=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
-# 下载模型文件（由于过大，仓库限制上传，请点击下方链接下载）
-[模型](https://pan.xunlei.com/s/VOCwqDXxMXww1rmTodLAnbCmA1?pwd=t6mg#)
+# 下载模型文件（由于过大，仓库限制上传，请复制下方链接下载）
+https://pan.xunlei.com/s/VOCwqDXxMXww1rmTodLAnbCmA1?pwd=t6mg#
 
 # 配置数据库地址和端口
 在项目根目录下找到plant.sql文件导入到数据库工具中

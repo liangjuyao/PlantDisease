@@ -69,7 +69,7 @@ port =
 
 
 # 启动
-点击app.py中的if __name__ == '__main__'启动入口
+在项目根目录下输入python app.py启动项目
 ```
 
 ## AI技术

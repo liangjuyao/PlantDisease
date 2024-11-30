@@ -157,11 +157,11 @@ validation_loader = torch.utils.data.DataLoader(
 我们使用卷积神经网络来创建模型。我们创建模型层，如下图所示。我们还为 Conv 层和 Pool 层指定了滤镜大小以及每个层的形状。
 
 形状 = （ 通道 ， 高度 ， 宽度 ）
-1.jpg
+![1](https://github.com/user-attachments/assets/413c5ff0-e5e5-4a41-81ec-96d5f83452a6)
 
 在 PyTorch 中，形状不是自动计算的，我们必须手动处理每一层的形状。在第一个全连接层，我们必须根据卷积层的形状提到输出大小。此计算也称为卷积算术。
 这是卷积算术的方程：
-2.jpg
+![2](https://github.com/user-attachments/assets/b947a727-9bab-4412-a51b-75de11920197)
 
 在这里，我们必须将图像分为 39 个类别，这就是为什么我们使用分类交叉熵作为损失和 adam 优化器。在模型中，我们使用 ReLU 作为激活，但对于最后一层，我们必须使用 Softmax 激活。在 PyTorch 中，我们有一个交叉熵损失，它是 softmax 和类别交叉熵损失的混合体。
 ```python
